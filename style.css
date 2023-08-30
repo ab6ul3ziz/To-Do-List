@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #23af32, #da23f3);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    .todo-app {
+        margin: 50% auto 20px;
+
+    }
+
+    ul li {
+        justify-content: end;
+        flex-direction: column;
+        border-bottom: 1px solid #000;
+    }
+}
+
+.todo-app h2 {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #eee;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.row input {
+    flex: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    background-color: #555897;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    border-bottom: 1px solid #000;
+    list-style: none;
+    user-select: none;
+    font-size: 18px;
+    padding: 12px 7px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '\f111';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid #252b28;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 19px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #aaa;
+    border-bottom-color: #aaa;
+}
+
+ul li.checked::before {
+    content: '\f058';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #555897;
+    border: none;
+}
+
+ul li span {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+ul li i {
+    display: flex;
+    align-items: end;
+}
+
+ul li i::after {
+    content: '\f068';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #555897;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 20px;
+}
